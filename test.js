@@ -4,29 +4,34 @@
     @see https://github.com/substack/testling-html-example
 */
 
-var assertion = 0;
-/*
-console.log('TAP version 13');
-console.log('1..3');
+;(function() {
 
-equal(text(document.querySelector('#a')), 'A');
-equal(text(document.querySelector('#b')), 'B');
-equal(text(document.querySelector('#c')), 'C');
+    var assertion = 0;
 
-function text(elem) { return elem.textContent || elem.innerText }
-*/
+    console.log('test square-number-spiral');
 
-
-function printSpiral(spiral) {
-    for (var r = 0; r < spiral.length; r += 1) {
-        console.log(spiral[r].join(','));
+    function equal (a, b, msg) {
+        assertion += 1;
+        console.log(assertion + ': ' + (a === b ? 'ok' : 'not ok') + (typeof msg == 'string' ? ': ' + msg : ''));
     }
-};
+    
+    var expected = [
+        [ 1,  2,  3,  4, 5],
+        [ 16, 17, 18, 19, 6],
+        [ 15, 24, 25, 20, 7],
+        [ 14, 23, 22, 21, 8],
+        [ 13, 12, 11, 10, 9]
+    ];
+    
+    var five = spiral(5);
 
-printSpiral(spiral(5));
+    equal(5, five.length, 'should have 5 rows');
+    
+    var COMMA = ',';
+    
+    for (var i = 0; i < 5; i += 1) {
+        equal(expected[i].join(COMMA), five[i].join(COMMA), 'should match values in row ' + i);
+    }
+}());
 
-equal(6, spiral(6).length, 'should be empty so far');
 
-function equal (a, b, msg) {
-    console.log((a === b ? 'ok' : 'not ok') + (typeof msg == 'string' ? ': ' + msg : '') + ' ' + (++ assertion));
-}
