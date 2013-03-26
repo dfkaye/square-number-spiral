@@ -1,15 +1,31 @@
 {
-    "name" : "square-number-spiral",
-    "version" : "0.0.0",
-    "testling" : {
-        "html" : "test.html",
-        "browsers" : [
-            "ie/6..latest",
-            "chrome/20..latest",
-            "firefox/10..latest",
-            "safari/latest",
-            "opera/11.0..latest",
-            "iphone/6", "ipad/6"
-        ]
-    }
+  "name" : "square-number-spiral",
+  "version" : "0.0.0",
+  "description": "javascript interview question for multi-directional arrays",
+  "homepage" : "https://github.com/dfkaye/square-number-spiral",
+  "author": {
+    "name": "david kaye (@dfkaye)",
+    "email" : "dfkaye@yahoo.com"
+  },
+  "contributors": [
+    {
+      "name": "david kaye (@dfkaye)",
+      "email": "dfkaye@yahoo.com"
+    } 
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dfkaye/square-number-spiral.git"
+  },
+  "testling" : {
+    "html" : "test.html",
+    "browsers" : [
+      "ie/6..latest",
+      "chrome/20..latest",
+      "firefox/10..latest",
+      "safari/latest",
+      "opera/11.0..latest",
+      "iphone/6", "ipad/6"
+    ]
+  }
 }
