@@ -8,7 +8,7 @@
 
     var assertion = 0;
 
-    console.log('test square-spiral');
+    console.log('spiral-test');
 
     function equal (a, b, msg) {
         assertion += 1;
@@ -28,9 +28,15 @@
     equal(5, five.length, 'should have 5 rows');
     
     var COMMA = ',';
+    var actual;
     
     for (var i = 0; i < 5; i += 1) {
-        equal(expected[i].join(COMMA), five[i].join(COMMA), 'should match values in row ' + i);
+    
+        actual = five[i].join(COMMA);
+        
+        console.log(actual);
+    
+        equal(expected[i].join(COMMA), actual, 'should match values in row ' + i);
     }
 }());
 

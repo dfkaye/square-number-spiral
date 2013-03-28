@@ -1,6 +1,8 @@
 square-number-spiral
 ====================
 
+(should be renamed...)
+
 Another interview question that came up - write a function that takes a number, 
 squares it, generates a square of numbers in sequence starting from top left, 
 and traverses the outermost positions not yet occupied by a number, creating a
@@ -9,7 +11,7 @@ spiral from lowest to highest values.
 tl;dr
 =====
 
-*Using square-spiral.js*, this:
+*Using spiral.js*, this:
 
     spiral(5);
     
@@ -25,10 +27,9 @@ should produce this:
 circuit
 =======
 
-square-circuit.js contains an alternate algorithm to that used in square-spiral.
-The metaphor is that each trip around the square is a circuit
+circuit.js contains an alternate algorithm to that used in spiral.js.
 
-*Using square-circuit.js*, this:
+*Using circuit.js*, this:
 
     circuit(5);
     
