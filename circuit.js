@@ -16,7 +16,7 @@
 * 
  * This:
  *
- *      circuit(5).print();
+ *      circuit(5);
  *  
  * should produce this:
  *
@@ -76,14 +76,6 @@
         }
         
         return square;
-        
-        /*return {
-            square: square,
-            print: function () {
-                console.log(square);
-                return this.square;
-            }
-        }*/
     };
     
     function resize(n) {

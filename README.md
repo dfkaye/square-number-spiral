@@ -9,7 +9,7 @@ spiral from lowest to highest values.
 tl;dr
 =====
 
-This:
+*Using square-spiral.js*, this:
 
     spiral(5);
     
@@ -21,10 +21,34 @@ should produce this:
     14, 23, 22, 21, 8
     13, 12, 11, 10, 9
 
+    
+circuit
+=======
+
+square-circuit.js contains an alternate algorithm to that used in square-spiral.
+The metaphor is that each trip around the square is a circuit
+
+*Using square-circuit.js*, this:
+
+    circuit(5);
+    
+should produce this:
+
+     1,  2,  3,  4, 5
+    16, 17, 18, 19, 6
+    15, 24, 25, 20, 7
+    14, 23, 22, 21, 8
+    13, 12, 11, 10, 9
+
+    
 Disclaimer
 ==========
 
-I won't claim the algorithm is elegant but it does produce the result correctly.
+I won't claim either algorithm is elegant but both produce the result correctly.
+
+
+Utility
+=======
 
 As an interview question this does not lead to an efficient use of time, but it 
 is an interesting problem in itself with respect to array traversal in four 
