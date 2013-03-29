@@ -41,18 +41,13 @@
         var dir = 0;
         var side = n;
         
+        var store = square(n);
+        var inc = orient(dir);
         var sides = resize(n);
-        var inc = turn(dir);
-        
-        var square = [];
-        
-        for (var r = 0; r < n; r += 1) {
-            square[r] = [];
-        }
                 
         for (var i = 0, x = 0, y = 0; i < total; i += 1) {
         
-            square[y][x] = i + 1;
+            store[y][x] = i + 1;
             
             side -= 1;
             
@@ -68,21 +63,41 @@
                 }
                 
                 side = sides[dir];
-                inc = turn(dir);
+                inc = orient(dir);
             }
             
             x += inc.x;
             y += inc.y;
         }
         
-        return square;
+        return store;
     };
     
+    /*
+      * make the array of arrays to store the number square results
+      */
+    function square(n) {
+    
+        var store = [];
+        
+        for (var r = 0; r < n; r += 1) {
+            store[r] = [];
+        }
+        
+        return store;
+    };
+
+    /*
+      * return an array of step sizes for each orientation given initial size n
+      */    
     function resize(n) {
         return [n, n - 1, n - 1, n - 2];
-    }
+    };
     
-    function turn(dir) {
+    /*
+      * returns an incrementation object with x and y values given a direction
+      */
+    function orient(dir) {
     
         var x, y;
 

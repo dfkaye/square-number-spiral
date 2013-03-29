@@ -1,12 +1,11 @@
-square-number-spiral
+square-number-spiral (could be renamed as 'number squares')
 ====================
 
-(should be renamed...)
+JavaScript interview question:
 
-Another interview question that came up - write a function that takes a number, 
-squares it, generates a square of numbers in sequence starting from top left, 
-and traverses the outermost positions not yet occupied by a number, creating a
-spiral from lowest to highest values.
+Write a function that takes a number, squares it, generates a square of numbers 
+in sequence starting from top left, and traverses the outermost positions not 
+occupied by a number, creating a spiral from lowest to highest values.
 
 tl;dr
 =====
@@ -27,7 +26,7 @@ should produce this:
 circuit
 =======
 
-circuit.js contains an alternate algorithm to that used in spiral.js.
+circuit.js - refactored spiral algorithm, plus some internal helper methods.
 
 *Using circuit.js*, this:
 
@@ -45,22 +44,23 @@ should produce this:
 Disclaimer
 ==========
 
-I won't claim either algorithm is elegant but both produce the result correctly.
+I won't claim either algorithm is elegant (circuit is probably less brittle) but 
+both produce the result correctly.
 
 
 Utility
 =======
 
-As an interview question this does not lead to an efficient use of time, but it 
-is an interesting problem in itself with respect to array traversal in four 
-directions.
+Not an efficient use of time in an interview, but it is an interesting problem 
+in itself with respect to array traversal in multiple directions/orientations.
 
 
 test.html with testling
 =======================
 
-uses [testling's html runner support](https://github.com/substack/testling-html-example)
-    
+trying to use [testling's html runner support](https://github.com/substack/testling-html-example)
+but not working there correctly yet.
+  
 see test result from [testling](https://ci.testling.com/dfkaye/square-number-spiral)
 
 [![browser support](https://ci.testling.com/dfkaye/square-number-spiral.png)](https://ci.testling.com/dfkaye/square-number-spiral)
