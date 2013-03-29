@@ -1,4 +1,4 @@
-﻿/*
+/*
  * tape test for number squares circuit() method
  */
 
