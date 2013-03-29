@@ -17,8 +17,11 @@
     "type": "git",
     "url": "git://github.com/dfkaye/square-number-spiral.git"
   },
-  "testling" : {
-    "html" : "test.html",
+  "devDependencies": {
+    "tape": "~0.2.2"
+  },
+  "testling": {
+    "files": "*-test.js",  
     "browsers" : [
       "ie/6..latest",
       "chrome/20..latest",

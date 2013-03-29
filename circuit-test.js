@@ -1,41 +1,44 @@
 ﻿/*
-    circuit-test.js for square-circuit
-    uses testling's html runner support
-    @see https://github.com/substack/testling-html-example
-*/
+ * tape test for number squares circuit() method
+ */
 
-;(function() {
+var test = require('tape');
+var circuit = require('./circuit.js').circuit;
 
-    var assertion = 0;
+test('verify circuit exists', function (t) {
 
-    console.log('circuit-test');
+  t.strictEqual(typeof circuit, 'function');
+  t.end();
+});
 
-    function equal (a, b, msg) {
-        assertion += 1;
-        console.log(assertion + ': ' + (a === b ? 'ok' : 'not ok') + (typeof msg == 'string' ? ': ' + msg : ''));
-    }
-    
-    var expected = [
-        [ 1,  2,  3,  4, 5],
-        [ 16, 17, 18, 19, 6],
-        [ 15, 24, 25, 20, 7],
-        [ 14, 23, 22, 21, 8],
-        [ 13, 12, 11, 10, 9]
-    ];
-    
-    var five = circuit(5);
+test('should contain 5 rows', function (t) {
 
-    equal(5, five.length, 'should have 5 rows');
+  t.equal(5, circuit(5).length);
+  t.end();
+});
+
+test('should match row contents', function (t) {
+
+  var expected = [
+    [ 1,  2,  3,  4, 5],
+    [ 16, 17, 18, 19, 6],
+    [ 15, 24, 25, 20, 7],
+    [ 14, 23, 22, 21, 8],
+    [ 13, 12, 11, 10, 9]
+  ];
+  
+  var COMMA = ',';
+  var five = circuit(5);
+  var actual;
+
+  for (var i = 0; i < 5; i += 1) {
+
+    actual = five[i].join(COMMA);
     
-    var COMMA = ',';
-    var actual;
-    
-    for (var i = 0; i < 5; i += 1) {
-    
-        actual = five[i].join(COMMA);
-        
-        console.log(actual);
-    
-        equal(expected[i].join(COMMA), actual, 'should match values in row ' + i);
-    }
-}());
+    console.log('actual: ' + actual);
+
+    t.equal(expected[i].join(COMMA), actual, 'should match values in row ' + i);
+  }
+  
+  t.end();
+});

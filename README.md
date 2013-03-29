@@ -55,12 +55,19 @@ Not an efficient use of time in an interview, but it is an interesting problem
 in itself with respect to array traversal in multiple directions/orientations.
 
 
-test.html with testling
-=======================
+tape & testling
+===============
 
-trying to use [testling's html runner support](https://github.com/substack/testling-html-example)
-but not working there correctly yet.
+Using tape to test in order to use testling.  tape works on node.js command line.
+
+[testling](https://ci.testling.com/dfkaye/square-number-spiral)
+
+[![browser support](http://ci.testling.com/dfkaye/square-number-spiral.png)](http://ci.testling.com/dfkaye/square-number-spiral)
+
+
+__from node command line__
+
+    cd ./square-number-spiral
   
-see test result from [testling](https://ci.testling.com/dfkaye/square-number-spiral)
-
-[![browser support](https://ci.testling.com/dfkaye/square-number-spiral.png)](https://ci.testling.com/dfkaye/square-number-spiral)
+    node circuit-test.js
+    node spiral-test.js
