@@ -58,11 +58,13 @@ in itself with respect to array traversal in multiple directions/orientations.
 tape & testling
 ===============
 
-Using tape to test in order to use testling.  tape works on node.js command line.
+Using [tape](https://github.com/substack/tape) to run tests from the node.js 
+command line, and in order to use [testling](http://ci.testling.com/) from the
+github service hook.
 
-[testling](https://ci.testling.com/dfkaye/square-number-spiral)
+[![browser support](https://ci.testling.com/dfkaye/square-number-spiral.png)](https://ci.testling.com/dfkaye/square-number-spiral)
 
-[![browser support](http://ci.testling.com/dfkaye/square-number-spiral.png)](http://ci.testling.com/dfkaye/square-number-spiral)
+[Things I've found about checking things in for testling to work](https://gist.github.com/dfkaye/5225546)
 
 
 __from node command line__

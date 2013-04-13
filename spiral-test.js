@@ -35,7 +35,7 @@ test('should match row contents', function (t) {
 
     actual = five[i].join(COMMA);
     
-    console.log('actual: ' + actual);
+    //console.log('actual: ' + actual);
 
     t.equal(expected[i].join(COMMA), actual, 'should match values in row ' + i);
   }
